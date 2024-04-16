@@ -1,8 +1,7 @@
-import 'dart:js_interop';
-
+import 'package:flutter/material.dart';
 import 'package:minimal_shop/models/product.dart';
 
-class Shop {
+class Shop extends ChangeNotifier {
   // List of product for sale
   final List<Product> _shop = const [
     Product(
@@ -41,8 +40,14 @@ class Shop {
   List<Product> get cart => _userCart;
 
   // add item to cart
-  void addToCart(Product item) => _userCart.add(item);
+  void addToCart(Product item) {
+    _userCart.add(item);
+    notifyListeners();
+  }
 
   // remove item from cart
-  void removeFromCart(Product item) => _userCart.remove(item);
+  void removeFromCart(Product item) {
+    _userCart.remove(item);
+    notifyListeners();
+  }
 }
