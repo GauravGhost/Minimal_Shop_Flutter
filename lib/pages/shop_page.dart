@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:minimal_shop/components/my_drawer.dart';
 import 'package:minimal_shop/components/my_product_tile.dart';
 import 'package:minimal_shop/models/shop.dart';
@@ -18,6 +17,9 @@ class ShopPage extends StatelessWidget {
         backgroundColor: Colors.transparent,
         foregroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: const Text('Shop Page'),
+        actions: [
+          IconButton(onPressed: () => Navigator.pushNamed(context, '/cart_page'), icon: const Icon(Icons.shopping_cart_outlined))
+        ],
       ),
       drawer: const MyDrawer(),
       backgroundColor: Theme.of(context).colorScheme.background,

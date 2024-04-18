@@ -5,27 +5,27 @@ class Shop extends ChangeNotifier {
   // List of product for sale
   final List<Product> _shop = const [
     Product(
-      name: "Product 1",
-      description: "This is description of product 1",
-      imagePath: "lib/assets/product1.png",
+      name: "All in One Desktop",
+      description: "This is set of desktop which includes Mouse, keyboard, Monitor, CPU",
+      imagePath: "lib/assets/6.jpg",
       price: 22.22,
     ),
     Product(
-      name: "Product 2",
-      description: "This is description of product 2",
-      imagePath: "lib/assets/product2.png",
+      name: "Monitor, Keyboard, Mouse",
+      description: "This is a set of Monitor, Keyboard and Mouse with the latest driver upadate. Monitor support upto 4k",
+      imagePath: "lib/assets/5.jpg",
       price: 22.22,
     ),
     Product(
-      name: "Product 3",
-      description: "This is description of product 3",
-      imagePath: "lib/assets/product3.png",
+      name: "Zesp i11 20th Gen Processor",
+      description: "Processor: Intel Core i5-1235U 12th Generation (up to 4.40 GHz, 12MB 10 Cores) RAM & Storage: 8 GB, 1 x 8 GB, DDR4, 2666 MHz, (2 DIMM Slots, Expandable upto 16GB) & 512GB SSD;Software: Pre-Loaded Windows 11 Home with Lifetime Validity | MS Office Home and Student 2021 with lifetime validity| McAfee Multi-Device Security 15-month subscription",
+      imagePath: "lib/assets/3.jpg",
       price: 22.22,
     ),
     Product(
-      name: "Product 4",
-      description: "This is description of product 4",
-      imagePath: "lib/assets/product4.png",
+      name: "Wireless Keyboard and mouse combo",
+      description: "Ditch the tangled wires with this wireless keyboard and mouse combo. Perfect for home, office, or on-the-go use.",
+      imagePath: "lib/assets/1.jpg",
       price: 22.22,
     )
   ];

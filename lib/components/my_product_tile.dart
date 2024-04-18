@@ -60,7 +60,7 @@ class MyProductTile extends StatelessWidget {
                   ),
                   width: double.infinity,
                   padding: const EdgeInsets.all(25),
-                  child: const Icon(Icons.favorite),
+                  child: Image.asset(product.imagePath),
                 ),
               ),
 
@@ -76,7 +76,10 @@ class MyProductTile extends StatelessWidget {
               const SizedBox(height: 10),
               // product description
               Text(
-                product.description,
+                product.description.length > 100
+                    ? "${product.description.substring(0, 100)} ..."
+                    : product.description,
+                maxLines: 3,
                 style: TextStyle(
                     color: Theme.of(context).colorScheme.inversePrimary),
               ),
