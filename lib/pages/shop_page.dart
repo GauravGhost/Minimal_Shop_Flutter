@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:minimal_shop/components/my_drawer.dart';
 import 'package:minimal_shop/components/my_product_tile.dart';
 import 'package:minimal_shop/models/shop.dart';
@@ -20,13 +21,26 @@ class ShopPage extends StatelessWidget {
       ),
       drawer: const MyDrawer(),
       backgroundColor: Theme.of(context).colorScheme.background,
-      body: ListView.builder(
-        itemCount: products.length,
-        itemBuilder: (context, index) {
-          // get each individual product ffrom shop
-          final product = products[index];
-          return MyProductTile(product: product);
-        },
+      body: ListView(
+        children: [
+          const SizedBox(
+            height: 25,
+          ),
+          const Center(
+              child: Text('Pick from a selected list of premium products')),
+          SizedBox(
+            height: 550,
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemCount: products.length,
+              itemBuilder: (context, index) {
+                // get each individual product ffrom shop
+                final product = products[index];
+                return MyProductTile(product: product);
+              },
+            ),
+          ),
+        ],
       ),
     );
   }
